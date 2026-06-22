@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anuj Yadav — Backend Developer</title>
+<meta name="description" content="Portfolio of Anuj Yadav, backend developer building projects with Java, Spring Boot and modern web technologies." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav-inner">
+      <span class="logo">anuj.dev</span>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+      <nav id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="page hero">
+      <div class="wrap">
+        <p class="hero-tag">hello world</p>
+        <span class="badge-open">
+          <span class="badge-dot"></span>
+          Open to work
+        </span>
+        <h1>Anuj Yadav</h1>
+        <p class="hero-role"><span id="typewriter"></span><span class="cursor">|</span></p>
+        <p class="hero-desc">I build server-side systems and APIs with Java and Spring Boot — currently looking for my first full-time role while shipping projects to keep learning and proving my work.</p>
+        <div class="hero-links">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+      <!-- <a class="scroll-cue" href="#about" aria-label="Scroll to About">↓</a> -->
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <div class="wrap about-wrap">
+        <p class="section-label">About</p>
+        <div class="about-grid">
+          <img class="profile-photo" src="profile-photo.png" alt="Anuj Yadav" />
+          <p class="about-text">I'm a backend developer who recently completed my B.Tech in Computer Science Engineering. My focus is on building real, working systems end to end — designing REST APIs, modeling databases, handling authentication and security, and deploying things live rather than leaving them as half-finished demos. Along the way I've worked with Java, Spring Boot, Spring Security, and MySQL, and picked up tools like JWT auth, third-party API integrations, and payment gateways while building my own projects from scratch. I'm currently looking for my first full-time backend role, and in the meantime I keep sharpening my fundamentals, picking up new certifications, and shipping small projects so I always have something real to show rather than just talk about. I learn best by building — so most of what's listed here started as something I wanted to understand better, not just a tutorial I followed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="page">
+      <div class="wrap">
+        <p class="section-label">Education</p>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-top">
+              <h3 class="edu-degree">B.Tech, Computer Science & Engineering</h3>
+              <span class="edu-years">2022 – 2026</span>
+            </div>
+            <p class="edu-school">Raj Kumar Goel Institute of Technology and Management</p>
+            <p class="edu-meta">CGPA: 8.1 / 10</p>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top">
+              <h3 class="edu-degree">Class XII</h3>
+              <span class="edu-years">2021</span>
+            </div>
+            <p class="edu-school">S B P Inter College, Varanasi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="page">
+      <div class="wrap">
+        <p class="section-label">Skills</p>
+        <div class="skills-groups">
+          <div class="skill-group">
+            <h4>Languages</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">HTML/CSS</span>
+              <span class="skill-pill">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">Spring Boot</span>
+              <span class="skill-pill">Spring Security</span>
+              <span class="skill-pill">JWT Auth</span>
+              <span class="skill-pill">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Database</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">JPA / Hibernate</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Tools</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">Git & GitHub</span>
+              <span class="skill-pill">Eclipse</span>
+              <span class="skill-pill">Postman</span>
+              <span class="skill-pill">Render / Vercel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="page">
+      <div class="wrap">
+        <p class="section-label">Projects</p>
+
+        <div class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Smart Interview Prep Platform</h3>
+            <span class="project-badge">Live</span>
+          </div>
+          <p class="project-desc">A full-stack interview preparation tool with JWT-based authentication, AI-generated questions via the Gemini API, voice input, answer evaluation, and progress tracking — built end to end with a Spring Boot backend.</p>
+          <div class="project-stack">
+            <span class="stack-pill">Spring Boot</span>
+            <span class="stack-pill">Spring Security</span>
+            <span class="stack-pill">JWT</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">Gemini API</span>
+          </div>
+          <div class="project-links">
+            <a class="link-chip" href="https://smart-interview-prep-li9z.onrender.com/login.html">Live demo →</a>
+            <a class="link-chip" href="https://github.com/Anuj-2770/smart-interview-prep">GitHub repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Smart Contact Manager</h3>
+            <span class="project-badge">Live</span>
+          </div>
+          <p class="project-desc">A contact management web app with a Spring Boot REST API backend, MySQL storage, and integrated Razorpay payments — built to manage and organize contacts with a clean, functional interface.</p>
+          <div class="project-stack">
+            <span class="stack-pill">Spring Boot</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">REST API</span>
+            <span class="stack-pill">Razorpay</span>
+          </div>
+          <div class="project-links">
+            <a class="link-chip" href="https://smart-contact-manager-1-7zdp.onrender.com/">Live demo →</a>
+            <a class="link-chip" href="https://github.com/Anuj-2770/smart-contact-manager">GitHub repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Age Calculator</h3>
+            <span class="project-badge">Live</span>
+          </div>
+          <p class="project-desc">A glassmorphism-styled age calculator that finds your exact age in years, months, and days, plus total months lived, total days lived, and days remaining until your next birthday.</p>
+          <div class="project-stack">
+            <span class="stack-pill">HTML</span>
+            <span class="stack-pill">CSS</span>
+            <span class="stack-pill">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="link-chip" href="https://age-calculator-sepia-delta.vercel.app/">Live demo →</a>
+            <a class="link-chip" href="https://github.com/Anuj-2770/age-calculator">GitHub repo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="page">
+      <div class="wrap">
+        <p class="section-label">Certificates</p>
+        <div class="cert-grid">
+
+          <a class="cert-card" href="certificates/nptel-programming-in-java.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Programming in Java</h4>
+            <p class="cert-issuer">NPTEL · IIT Kharagpur</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/gfg-java-programming.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Java Programming (10-week)</h4>
+            <p class="cert-issuer">GeeksforGeeks</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/google-android-internship.jpg">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Android Developer Virtual Internship</h4>
+            <p class="cert-issuer">EduSkills · Google for Developers</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/postman-api-beginner.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">API Beginner Learning Path</h4>
+            <p class="cert-issuer">Postman Academy</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/gfg-advanced-java.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Advanced Java Skill Up</h4>
+            <p class="cert-issuer">GeeksforGeeks</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/anthropic-claude-code-in-action.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Claude Code in Action</h4>
+            <p class="cert-issuer">Anthropic</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/anthropic-claude-101.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Claude 101</h4>
+            <p class="cert-issuer">Anthropic</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/tcs-ion-generative-ai-essentials.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Generative AI Essentials</h4>
+            <p class="cert-issuer">TCS iON · AI for All</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/tcs-ion-yuva-ai-for-all.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">YUVA AI For All</h4>
+            <p class="cert-issuer">TCS iON · IndiaAI</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/digital-heroes-fullstack-training.pdf">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Full-Stack Developer Training</h4>
+            <p class="cert-issuer">Digital Heroes</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page contact-page">
+      <div class="wrap">
+        <p class="section-label">Contact</p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <a href="mailto:yadavanuj27a@gmail.com">yadavanuj27a@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">GitHub</span>
+            <a href="https://github.com/Anuj-2770">github.com/Anuj-2770</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/anujyadav9005/">linkedin.com/in/anujyadav9005</a>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Built by Anuj Yadav</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
