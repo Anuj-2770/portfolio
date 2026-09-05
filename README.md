@@ -1,45 +1,59 @@
 # Portfolio — Anuj Yadav
 
-Personal portfolio website showcasing my projects, built with plain HTML, CSS, and JavaScript.
+Personal portfolio of Anuj Yadav — Backend Developer, built with plain HTML, CSS, and JavaScript.
 
 🔗 **Live site:** [add your Vercel URL here]
 
 ## About
 
-I'm a backend developer, currently building and shipping small projects to learn and grow. This portfolio is where I'll keep adding projects as I build them.
+Backend developer with a B.Tech in Computer Science (2022–2026). I build REST APIs, backend systems, and full-stack apps using Java and Spring Boot. This portfolio showcases my projects, certifications, and education.
 
-## Projects Showcased
+## Projects
 
-- **Age Calculator** — A glassmorphism-styled tool that calculates exact age in years/months/days, total months & days lived, and days remaining until the next birthday.
+- **Smart Interview Prep Platform** — AI-powered interview prep tool with JWT auth, Gemini API integration, voice input, and progress tracking.
+  - Live: https://smart-interview-prep-li9z.onrender.com/login.html
+  - Code: https://github.com/Anuj-2770/smart-interview-prep
+
+- **Smart Contact Manager** — Contact management app with Spring Boot REST API, MySQL, and Razorpay payment integration.
+  - Live: https://smart-contact-manager-1-7zdp.onrender.com/
+  - Code: https://github.com/Anuj-2770/smart-contact-manager
+
+- **Age Calculator** — Glassmorphism-styled tool to calculate exact age in years, months, days, and more.
   - Live: https://age-calculator-sepia-delta.vercel.app/
   - Code: https://github.com/Anuj-2770/age-calculator
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+- HTML5, CSS3, Vanilla JavaScript
+- Dark / Light theme toggle
+- Typewriter animation, fade-in transitions
+- Tab-style single-page navigation
 
 ## Project Structure
 
 ```
 .
-└── index.html      # Single-page portfolio (structure + styling)
+├── index.html          # Page structure and all sections
+├── style.css           # Styling, themes, animations
+├── script.js           # Navigation, theme toggle, typewriter
+├── profile-photo.png   # Profile photo
+├── resume.pdf          # Downloadable resume
+└── certificates/       # All certificate PDFs and images
 ```
 
 ## Running Locally
 
-No build step or dependencies needed. Clone the repo and open `index.html` in your browser:
+No build step needed. Clone and open in browser:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-open index.html
+git clone https://github.com/Anuj-2770/<portfolio-repo-name>.git
+cd <portfolio-repo-name>
+# Open index.html in browser or use VS Code Live Server
 ```
 
 ## Deployment
 
-Deployed live on [Vercel](https://vercel.com)'s free Hobby plan as a static site — no build configuration required.
+Deployed on [Vercel](https://vercel.com)'s free Hobby plan as a static site — no build config required.
 
 ## Contact
 

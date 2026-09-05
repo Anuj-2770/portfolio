@@ -3,359 +3,304 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Anuj Yadav — Portfolio</title>
-<meta name="description" content="Portfolio of Anuj Yadav, student and beginner web developer." />
+<title>Anuj Yadav — Backend Developer</title>
+<meta name="description" content="Portfolio of Anuj Yadav, backend developer building projects with Java, Spring Boot and modern web technologies." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0f1115;
-    --bg-soft: #161922;
-    --line: rgba(255,255,255,0.08);
-    --text: #ededf2;
-    --text-dim: rgba(237,237,242,0.6);
-    --text-faint: rgba(237,237,242,0.4);
-    --accent: #7ef0c2;
-    --accent-dim: rgba(126,240,194,0.12);
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
-
-  * { box-sizing: border-box; }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    line-height: 1.6;
-  }
-
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* Header / nav */
-  header {
-    border-bottom: 1px solid var(--line);
-    padding: 20px 0;
-  }
-
-  .nav-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    color: var(--accent);
-  }
-
-  nav a {
-    color: var(--text-dim);
-    text-decoration: none;
-    font-size: 14px;
-    margin-left: 24px;
-    transition: color 0.2s ease;
-  }
-
-  nav a:hover { color: var(--text); }
-
-  /* Hero */
-  .hero {
-    padding: 72px 0 56px;
-  }
-
-  .hero-tag {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
-    margin: 0 0 18px;
-  }
-
-  .hero-tag::before {
-    content: "> ";
-  }
-
-  h1 {
-    font-family: var(--font-display);
-    font-size: clamp(32px, 7vw, 48px);
-    font-weight: 700;
-    margin: 0 0 16px;
-    letter-spacing: -0.01em;
-  }
-
-  .hero p {
-    color: var(--text-dim);
-    font-size: 17px;
-    max-width: 480px;
-    margin: 0 0 28px;
-  }
-
-  .hero-links {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 8px;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-  }
-
-  .btn:hover { transform: translateY(-2px); }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #07120d;
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--line);
-  }
-
-  /* Section heading */
-  .section {
-    padding: 48px 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .section-label {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    margin: 0 0 20px;
-  }
-
-  /* About */
-  .about p {
-    color: var(--text-dim);
-    font-size: 16px;
-    max-width: 560px;
-  }
-
-  /* Project card */
-  .project-card {
-    background: var(--bg-soft);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 28px;
-  }
-
-  .project-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-
-  .project-title {
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  .project-badge {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--accent);
-    background: var(--accent-dim);
-    padding: 4px 10px;
-    border-radius: 999px;
-    white-space: nowrap;
-  }
-
-  .project-desc {
-    color: var(--text-dim);
-    font-size: 15px;
-    margin: 0 0 18px;
-  }
-
-  .project-stack {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-
-  .stack-pill {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-dim);
-    border: 1px solid var(--line);
-    padding: 4px 10px;
-    border-radius: 999px;
-  }
-
-  .project-links {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .link-chip {
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--text);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .link-chip svg { width: 15px; height: 15px; }
-  .link-chip:hover { color: var(--accent); }
-
-  /* Contact */
-  .contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .contact-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 15px;
-  }
-
-  .contact-row span.label {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-faint);
-    width: 76px;
-    flex-shrink: 0;
-  }
-
-  .contact-row a {
-    color: var(--text);
-    text-decoration: none;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .contact-row a:hover { color: var(--accent); border-color: var(--accent); }
-
-  /* Footer */
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 24px 0 40px;
-    text-align: center;
-  }
-
-  footer p {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-faint);
-    margin: 0;
-  }
-
-  @media (max-width: 600px) {
-    .hero { padding: 48px 0 40px; }
-    nav a { margin-left: 14px; font-size: 13px; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <div class="wrap nav-inner">
       <span class="logo">anuj.dev</span>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+      <nav id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero wrap">
-    <p class="hero-tag">hello world</p>
-    <h1>Anuj Yadav</h1>
-    <p>Student and beginner web developer, learning by building small, genuinely useful tools and shipping them for real.</p>
-    <div class="hero-links">
-      <a class="btn btn-primary" href="#projects">View projects</a>
-      <a class="btn btn-secondary" href="mailto:yadavanuj27a@gmail.com">Get in touch</a>
-    </div>
-  </section>
+  <main>
 
-  <section id="about" class="section wrap about">
-    <p class="section-label">About</p>
-    <p>I'm a student currently building my skills in web development — HTML, CSS, and JavaScript first, with more tools and frameworks on the way. I like picking projects that solve something I've actually run into myself, and I learn fastest by shipping things end to end: building, deploying, and putting them in front of people.</p>
-  </section>
+    <!-- HOME -->
+    <section id="home" class="page center-v hero">
+      <div class="wrap">
+        <p class="hero-tag">shipping backend systems</p>
+        <span class="badge-open">
+          <span class="badge-dot"></span>
+          Open to work
+        </span>
+        <h1>Anuj Yadav</h1>
+        <p class="hero-role"><span id="typewriter"></span><span class="cursor">|</span></p>
+        <p class="hero-desc">I build server-side systems and APIs with Java and Spring Boot — seeking an entry-level backend developer role while shipping real projects end to end.</p>
+        <div class="hero-links">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About">↓</a>
+    </section>
 
-  <section id="projects" class="section wrap">
-    <p class="section-label">Projects</p>
+    <!-- ABOUT -->
+    <section id="about" class="page center-v">
+      <div class="wrap about-wrap">
+        <p class="section-label">About</p>
+        <div class="about-grid">
+          <img class="profile-photo" src="profile-photo.png" alt="Anuj Yadav" />
+          <div>
+            <p class="about-text">I'm a backend developer who recently completed my B.Tech in Computer Science Engineering. My focus is on building real, working systems end to end — designing REST APIs, modeling databases, handling authentication and security, and deploying things live rather than leaving them as half-finished demos.</p>
+            <p class="about-text">Along the way I've worked with Java, Spring Boot, Spring Security, and MySQL, and picked up tools like JWT auth, third-party API integrations, and payment gateways while building my own projects from scratch. I learn best by building — so most of what's listed here started as something I wanted to understand better, not just a tutorial I followed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="project-card">
-      <div class="project-top">
-        <h3 class="project-title">Age Calculator</h3>
-        <span class="project-badge">Live</span>
+    <!-- EDUCATION -->
+    <section id="education" class="page center-v">
+      <div class="wrap">
+        <p class="section-label">Education</p>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-top">
+              <h3 class="edu-degree">B.Tech, Computer Science & Engineering</h3>
+              <span class="edu-years">2022 – 2026</span>
+            </div>
+            <p class="edu-school">Raj Kumar Goel Institute of Technology and Management</p>
+            <p class="edu-meta">CGPA: 8.1 / 10</p>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top">
+              <h3 class="edu-degree">Class XII</h3>
+              <span class="edu-years">2021</span>
+            </div>
+            <p class="edu-school">S B P Inter College, Varanasi</p>
+          </div>
+        </div>
       </div>
-      <p class="project-desc">
-        A glassmorphism-styled age calculator that finds your exact age in years, months, and days, plus total months lived, total days lived, and days remaining until your next birthday. Built because I needed exact age calculations for forms and ID applications and most calculators online felt cluttered with ads.
-      </p>
-      <div class="project-stack">
-        <span class="stack-pill">HTML</span>
-        <span class="stack-pill">CSS</span>
-        <span class="stack-pill">JavaScript</span>
-      </div>
-      <div class="project-links">
-        <a class="link-chip" href="https://age-calculator-sepia-delta.vercel.app/" target="_blank" rel="noopener noreferrer">
-          Live demo →
-        </a>
-        <a class="link-chip" href="https://github.com/Anuj-2770/age-calculator" target="_blank" rel="noopener noreferrer">
-          GitHub repo →
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section wrap">
-    <p class="section-label">Contact</p>
-    <div class="contact-list">
-      <div class="contact-row">
-        <span class="label">Email</span>
-        <a href="mailto:yadavanuj27a@gmail.com">yadavanuj27a@gmail.com</a>
+    <!-- SKILLS -->
+    <section id="skills" class="page center-v">
+      <div class="wrap">
+        <p class="section-label">Skills</p>
+        <div class="skills-groups">
+          <div class="skill-group">
+            <h4>Languages</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">HTML/CSS</span>
+              <span class="skill-pill">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">Spring Boot</span>
+              <span class="skill-pill">Spring Security</span>
+              <span class="skill-pill">JWT Auth</span>
+              <span class="skill-pill">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Database</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">JPA / Hibernate</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Tools</h4>
+            <div class="skill-pills">
+              <span class="skill-pill">Git & GitHub</span>
+              <span class="skill-pill">Eclipse</span>
+              <span class="skill-pill">Postman</span>
+              <span class="skill-pill">Render / Vercel</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="contact-row">
-        <span class="label">GitHub</span>
-        <a href="https://github.com/Anuj-2770" target="_blank" rel="noopener noreferrer">github.com/Anuj-2770</a>
-      </div>
-      <div class="contact-row">
-        <span class="label">LinkedIn</span>
-        <a href="https://www.linkedin.com/in/anujyadav9005/" target="_blank" rel="noopener noreferrer">linkedin.com/in/anujyadav9005</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>Built by Anuj Yadav</p>
-  </footer>
+    <!-- PROJECTS -->
+    <section id="projects" class="page">
+      <div class="wrap">
+        <p class="section-label">Projects</p>
 
+        <div class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Smart Interview Prep Platform</h3>
+            <span class="project-badge">Live</span>
+          </div>
+          <p class="project-desc">A full-stack interview preparation tool with JWT-based authentication, AI-generated questions via the Gemini API, voice input, answer evaluation, and progress tracking — built end to end with a Spring Boot backend.</p>
+          <div class="project-stack">
+            <span class="stack-pill">Spring Boot</span>
+            <span class="stack-pill">Spring Security</span>
+            <span class="stack-pill">JWT</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">Gemini API</span>
+          </div>
+          <div class="project-links">
+            <a class="link-chip" href="https://smart-interview-prep-li9z.onrender.com/login.html" target="_blank" rel="noopener noreferrer">Live demo →</a>
+            <a class="link-chip" href="https://github.com/Anuj-2770/smart-interview-prep" target="_blank" rel="noopener noreferrer">GitHub repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Smart Contact Manager</h3>
+            <span class="project-badge">Live</span>
+          </div>
+          <p class="project-desc">A contact management web app with a Spring Boot REST API backend, MySQL storage, and integrated Razorpay payments — built to manage and organize contacts with a clean, functional interface.</p>
+          <div class="project-stack">
+            <span class="stack-pill">Spring Boot</span>
+            <span class="stack-pill">MySQL</span>
+            <span class="stack-pill">REST API</span>
+            <span class="stack-pill">Razorpay</span>
+          </div>
+          <div class="project-links">
+            <a class="link-chip" href="https://smart-contact-manager-1-7zdp.onrender.com/" target="_blank" rel="noopener noreferrer">Live demo →</a>
+            <a class="link-chip" href="https://github.com/Anuj-2770/smart-contact-manager" target="_blank" rel="noopener noreferrer">GitHub repo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <h3 class="project-title">Age Calculator</h3>
+            <span class="project-badge">Live</span>
+          </div>
+          <p class="project-desc">A glassmorphism-styled age calculator that finds your exact age in years, months, and days, plus total months lived, total days lived, and days remaining until your next birthday.</p>
+          <div class="project-stack">
+            <span class="stack-pill">HTML</span>
+            <span class="stack-pill">CSS</span>
+            <span class="stack-pill">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="link-chip" href="https://age-calculator-sepia-delta.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo →</a>
+            <a class="link-chip" href="https://github.com/Anuj-2770/age-calculator" target="_blank" rel="noopener noreferrer">GitHub repo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="page">
+      <div class="wrap">
+        <p class="section-label">Certificates</p>
+        <div class="cert-grid">
+
+          <a class="cert-card" href="certificates/nptel-programming-in-java.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Programming in Java</h4>
+            <p class="cert-issuer">NPTEL · IIT Kharagpur</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/gfg-advanced-java.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Advanced Java Skill Up</h4>
+            <p class="cert-issuer">GeeksforGeeks</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/gfg-java-programming.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Java Programming (10-week)</h4>
+            <p class="cert-issuer">GeeksforGeeks</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/postman-api-beginner.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">API Beginner Learning Path</h4>
+            <p class="cert-issuer">Postman Academy</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/google-android-internship.jpg" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Android Developer Virtual Internship</h4>
+            <p class="cert-issuer">EduSkills · Google for Developers</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/tcs-ion-generative-ai-essentials.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Generative AI Essentials</h4>
+            <p class="cert-issuer">TCS iON · AI for All</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/tcs-ion-yuva-ai-for-all.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">YUVA AI For All</h4>
+            <p class="cert-issuer">TCS iON · IndiaAI</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/anthropic-claude-code-in-action.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Claude Code in Action</h4>
+            <p class="cert-issuer">Anthropic</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/anthropic-claude-101.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Claude 101</h4>
+            <p class="cert-issuer">Anthropic</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+          <a class="cert-card" href="certificates/digital-heroes-fullstack-training.pdf" target="_blank" rel="noopener noreferrer">
+            <span class="cert-icon">🎓</span>
+            <h4 class="cert-name">Full-Stack Developer Training</h4>
+            <p class="cert-issuer">Digital Heroes</p>
+            <span class="cert-view">View certificate →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page center-v contact-page">
+      <div class="wrap">
+        <p class="section-label">Contact</p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <a href="mailto:yadavanuj27a@gmail.com">yadavanuj27a@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">GitHub</span>
+            <a href="https://github.com/Anuj-2770" target="_blank" rel="noopener noreferrer">github.com/Anuj-2770</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/anujyadav9005/" target="_blank" rel="noopener noreferrer">linkedin.com/in/anujyadav9005</a>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>Built by Anuj Yadav</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="javascript.js"></script>
 </body>
 </html>
